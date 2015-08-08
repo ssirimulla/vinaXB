@@ -17,6 +17,10 @@
    Author: Dr. Oleg Trott <ot14@columbia.edu>, 
            The Olson Lab, 
            The Scripps Research Institute
+ 
+    Modified by: Grant Schmadeke
+                 Sirimulla Research Group
+                 www.sirimullaresearchgroup.com
 
 */
 
@@ -440,7 +444,35 @@ int main(int argc, char* argv[]) {
     \n\
     Thank you!\n";
 
-	const std::string cite_message = "";
+    const std::string begin_message =
+    "\n\
+    #################################################################\n\
+    #                                                               #\n\
+    #        VinaXB: a program optimized for halogen bonding        #\n\
+    #                                                               #\n\
+    #      Code modified from Autodock Vina by Grant Schmadeke      #\n\
+    #                   Sirimulla Research Group                    #\n\
+    #                St. Louis College of Pharmacy                  #\n\
+    #                www.sirimullaresearchgroup.com                 #\n\
+    #                                                               #\n\
+    # Please cite:                                                  #\n\
+    # Sirimulla, Suman, et al. 'Halogen interactions in             #\n\
+    # protein–ligand complexes: implications of halogen bonding     #\n\
+    # for rational drug design.' Journal of chemical information    #\n\
+    # and modeling 53.11 (2013): 2781-2791.                         #\n\
+    #                                                               #\n\
+    #################################################################\n";
+    
+    const std::string end_message =
+    "\n\
+    #################################################################\n\
+    #                                                               #\n\
+    # For more information, please see github.com/ssirimulla/vinaXB #\n\
+    # or visit www.sirimullaresearchgroup.com/software              #\n\
+    #                                                               #\n\
+    #                  Thank you for using VinaXB                   #\n\
+    #                                                               #\n\
+    #################################################################\n";
 
 	try {
 		std::string rigid_name, ligand_name, flex_name, config_name, out_name, log_name;
@@ -618,7 +650,7 @@ int main(int argc, char* argv[]) {
 				throw usage_error("Search space dimensions should be positive");
 		}
 
-		log << cite_message << '\n';
+		log << begin_message << '\n';
 
 		if(search_box_needed && size_x * size_y * size_z > 27e3) {
 			log << "WARNING: The search space volume > 27000 Angstrom^3 (See FAQ)\n";
@@ -692,7 +724,10 @@ int main(int argc, char* argv[]) {
 					gd, exhaustiveness,
 					weights,
 					cpu, seed, verbosity, max_modes_sz, energy_range, log);
-	}
+
+        log << end_message << '\n';
+
+    }
 	catch(file_error& e) {
 		std::cerr << "\n\nError: could not open \"" << e.name.string() << "\" for " << (e.in ? "reading" : "writing") << ".\n";
 		return 1;
