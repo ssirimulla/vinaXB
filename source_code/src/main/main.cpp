@@ -456,10 +456,10 @@ int main(int argc, char* argv[]) {
     #                www.sirimullaresearchgroup.com                 #\n\
     #                                                               #\n\
     # Please cite:                                                  #\n\
-    # Sirimulla, Suman, et al. 'Halogen interactions in             #\n\
-    # protein–ligand complexes: implications of halogen bonding     #\n\
-    # for rational drug design.' Journal of chemical information    #\n\
-    # and modeling 53.11 (2013): 2781-2791.                         #\n\
+    # Koebel, et al. 'AutoDock VinaXB: Implementation of XBSF, new  #\n\
+    # empirical halogen scoring function, into AutoDock Vina.'      #\n\
+    # Journal of cheminformatics xxx                                #\n\
+    # Currently under review.                                       #\n\
     #                                                               #\n\
     #################################################################\n";
     
