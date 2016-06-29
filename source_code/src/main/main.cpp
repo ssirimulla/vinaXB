@@ -458,8 +458,8 @@ int main(int argc, char* argv[]) {
     # Please cite:                                                  #\n\
     # Koebel, et al. 'AutoDock VinaXB: Implementation of XBSF, new  #\n\
     # empirical halogen scoring function, into AutoDock Vina.'      #\n\
-    # Journal of cheminformatics xxx                                #\n\
-    # Currently under review.                                       #\n\
+    # Journal of Cheminformatics 2016 8:27                          #\n\
+    # DOI: 10.1186/s13321-016-0139-1                                #\n\
     #                                                               #\n\
     #################################################################\n";
     
